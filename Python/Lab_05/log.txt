@@ -1,0 +1,13 @@
+Lab Reflection:
+
+1. Approach:
+Used Python math library functions to perform engineering calculations: math.pow(), math.sqrt(), math.ceil(), and math.floor(). Read base value, exponent, and decimal measurement from the user.
+
+2. Errors Faced:
+- Error 1: NameError: name 'sqrt' is not defined.
+  Fix: Forgot to import math at the top. Added 'import math' and called math.sqrt().
+- Error 2: ValueError: math domain error when testing negative number for sqrt.
+  Fix: Made sure test input for square root is non-negative.
+
+3. Output:
+Tested with value 16, exponent 2, measurement 4.7. Output: Power 256.0, Sqrt 4.0000, Ceil 5, Floor 4.

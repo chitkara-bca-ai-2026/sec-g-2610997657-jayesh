@@ -1,0 +1,13 @@
+Lab Reflection:
+
+1. Approach:
+Took user inputs for tuition fee, lab fee, library fee, exam fee, and discount amount. Converted each value to float and calculated total fee, discounted fee, annual fee (2 semesters), and monthly installment by dividing by 12. Displayed all calculated figures cleanly.
+
+2. Errors Faced:
+- Error 1: TypeError: unsupported operand type(s) for +: 'float' and 'str'.
+  Fix: Realized input() returns string by default, wrapped every fee prompt with float().
+- Error 2: Monthly installment had too many decimal places like 5416.666666666667.
+  Fix: Formatted it to two decimal places using {:.2f} in the print statement.
+
+3. Output:
+Tested with 25000, 5000, 2000, 3000 and 2500 discount. Got Total: 35000.0, Annual: 65000.0, Monthly: 5416.67.

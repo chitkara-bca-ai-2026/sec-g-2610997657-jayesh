@@ -1,0 +1,13 @@
+Lab Reflection:
+
+1. Approach:
+Developed a clothing store billing system. Took customer name, garment name, unit price, and quantity, calculated total bill using multiplication, and displayed a formatted receipt.
+
+2. Errors Faced:
+- Error 1: Total bill printed as string repetition because price wasn't converted to numeric.
+  Fix: Cast price to float() and quantity to int().
+- Error 2: Missing border alignment in the bill preview.
+  Fix: Matched line lengths to 42 characters of '='.
+
+3. Output:
+Tested with customer Ravi Kumar, Shirt, price 500, quantity 3. Total amount printed: Rs. 1500.0.

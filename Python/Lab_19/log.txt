@@ -1,0 +1,13 @@
+Lab Reflection:
+
+1. Approach:
+Built a Student Notes Management System using Python file handling. Implemented write_notes(filename, content) using open() in 'w' mode with 'with' context manager, and read_notes(filename) in 'r' mode with os.path.exists() defensive checking.
+
+2. Errors Faced:
+- Error 1: FileNotFoundError when user chose option 2 (view notes) before saving any note.
+  Fix: Added 'if not os.path.exists(filename):' check returning an informative message instead of crashing.
+- Error 2: Notes were getting overwritten without user warning.
+  Fix: Explained 'w' mode behavior clearly in menu prompt.
+
+3. Output:
+Wrote sample study notes to notes.txt, read them back, and displayed formatted preview. Exited cleanly.

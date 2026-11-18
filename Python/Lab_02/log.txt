@@ -1,0 +1,13 @@
+Lab Reflection:
+
+1. Approach:
+Created an employee information program that takes employee name, ID, salary, department, and active status. Used type() function right after each input to demonstrate Python's dynamic typing and display formatted employee summary at the end.
+
+2. Errors Faced:
+- Error 1: Casting active status using bool('no') evaluated to True.
+  Fix: In Python any non-empty string is True when passed to bool(). Changed it to check if user entered 'yes' or 'y': input().strip().lower() in ['yes', 'y'].
+- Error 2: ValueError when entering salary as float with int() conversion.
+  Fix: Used float() for salary to handle decimals properly.
+
+3. Output:
+Tested with 'Priya Singh', 1002, 52000.75, 'IT', and 'yes'. All types matched expected str, int, float, str, bool.

@@ -1,0 +1,13 @@
+Lab Reflection:
+
+1. Approach:
+Built an account registration validator that tests password strength against 3 rules: minimum 8 characters, at least one digit (0-9), and at least one uppercase letter (A-Z). Displayed individual [PASS]/[FAIL] status for each rule and gave final account creation verdict.
+
+2. Errors Faced:
+- Error 1: Loop over password characters kept resetting validation flag.
+  Fix: Used any() generator expressions for clean checking: any(c.isdigit() for c in pwd) and any(c.isupper() for c in pwd).
+- Error 2: Password printed in plain text in report.
+  Fix: Masked password using '*' * len(password) for security.
+
+3. Output:
+Tested with student_user and Secure@123. All 3 rules passed, reported: 'Password is VALID! Account created successfully'.

@@ -1,0 +1,13 @@
+Lab Reflection:
+
+1. Approach:
+Developed a student result analysis tool using Python's csv module (csv.DictReader). Read students_data.csv containing columns RollNo, Name, Subject, Marks. Implemented read_all_students() and filter_students_above_threshold() to filter students scoring strictly > 50.
+
+2. Errors Faced:
+- Error 1: TypeError: '>' not supported between instances of 'str' and 'int' when comparing row['Marks'] > 50.
+  Fix: csv.DictReader reads all columns as strings. Converted marks using int(row['Marks'].strip()).
+- Error 2: Columns in output table were ragged.
+  Fix: Used fixed column widths f'{roll:<8} {name:<12} {subject:<10} {marks:<6}'.
+
+3. Output:
+Displayed all 6 records (Aman, Riya, Karan, Neha, Rohit, Pooja). Filtered students with Marks > 50: displayed Aman (85), Riya (92), Neha (78), Pooja (62), qualified student count = 4.

@@ -1,0 +1,13 @@
+Lab Reflection:
+
+1. Approach:
+Built a student record display utility using Python f-strings. Captured student name, age, and marks, then formatted the output with border lines and aligned labels.
+
+2. Errors Faced:
+- Error 1: SyntaxError inside f-string because of mismatched quotes.
+  Fix: Kept variable names simple inside {} and avoided nested conflicting quotes.
+- Error 2: Marks printed as integer 85 instead of float 85.0.
+  Fix: Converted marks input with float(input()).
+
+3. Output:
+Tested with Alice, age 20, marks 85. Output printed neatly within equal sign headers.

@@ -1,0 +1,13 @@
+Lab Reflection:
+
+1. Approach:
+Built a document statistics analyzer. get_document_statistics(filename) computes total line count, word count using line.split(), and total characters. display_document(filename) prints raw file content with line numbers (1 | line).
+
+2. Errors Faced:
+- Error 1: Character count included carriage return '\r' on Windows systems.
+  Fix: Read entire file content cleanly using with open(filename, 'r', encoding='utf-8') as f: content = f.read().
+- Error 2: Line count was off by one due to trailing empty newline.
+  Fix: Used len([l for l in lines if l.strip()]) or preserved exact raw lines as per testpad spec.
+
+3. Output:
+Tested with document.txt containing 4 lines on AI and Python. Computed 4 lines, 37 words, 279 characters. Displayed numbered lines 1 to 4.

@@ -1,0 +1,13 @@
+Lab Reflection:
+
+1. Approach:
+Demonstrated type casting in Python. Read product name, price, and quantity as text, converted price to float and quantity to int, computed total price, and cast total price back to string for invoice display. Printed a type casting summary table and invoice.
+
+2. Errors Faced:
+- Error 1: Columns in type casting summary table were misaligned.
+  Fix: Used formatted f-string widths like {:<16} to make table columns line up straight.
+- Error 2: Multiplying string quantity with price gave TypeError.
+  Fix: Converted quantity explicitly using int().
+
+3. Output:
+Tested with Laptop, price 45000.50, qty 2. Invoice total came out to Rs. 90001.0.

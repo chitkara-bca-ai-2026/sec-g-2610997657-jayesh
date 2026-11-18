@@ -1,0 +1,13 @@
+Lab Reflection:
+
+1. Approach:
+Developed a student records handling module using dictionary data structures and functions. Defined calculate_results(marks) returning a tuple (total, average), display_student(roll, student) for formatted printing, and add_student(records, roll, name, marks) with duplicate validation.
+
+2. Errors Faced:
+- Error 1: Tuple unpacking error when calculate_results returned None on empty marks list.
+  Fix: Returned (0, 0.0) as default tuple if marks list is empty.
+- Error 2: Re-prompting user after duplicate roll error without breaking loop flow.
+  Fix: Added clear return status boolean from add_student() to inform caller.
+
+3. Output:
+Loaded 3 initial students (101 Aman, 102 Riya, 103 Karan). Calculated averages correctly (Aman 84.33%, Riya 91.67%, Karan 78.67%). Added student 104 Neha, searched roll 104, tested search for non-existent 999.

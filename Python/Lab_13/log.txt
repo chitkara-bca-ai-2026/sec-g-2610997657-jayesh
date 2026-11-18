@@ -1,0 +1,15 @@
+Lab Reflection:
+
+1. Approach:
+Implemented an interactive, menu-driven inventory control system using a Python list and a while True loop. Supported options: 1) View Inventory, 2) Add Item, 3) Remove Item, 4) Sort Inventory, 5) Exit. Used list methods .append(), .remove(), and .sort().
+
+2. Errors Faced:
+- Error 1: ValueError: list.remove(x): x not in list when trying to remove an item not present in the inventory.
+  Fix: Used membership check 'if item in inventory:' before calling .remove(). If not found, printed informative error message.
+- Error 2: Infinite loop because I forgot to break when choice == '5'.
+  Fix: Added 'break' under option 5 to terminate the while loop cleanly.
+- Error 3: User typing lowercase 'marker' while item was 'Marker'.
+  Fix: Standardized inputs with .strip().title() for consistent matching.
+
+3. Output:
+Tested starting inventory ['Notebook', 'Pen', 'Eraser', 'Ruler']. Added 'Marker', sorted list, removed 'Pen', viewed inventory. Handled invalid choice numbers gracefully.

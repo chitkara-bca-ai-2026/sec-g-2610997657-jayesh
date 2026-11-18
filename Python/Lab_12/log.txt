@@ -1,0 +1,13 @@
+Lab Reflection:
+
+1. Approach:
+Created a document text analysis tool to count words, vowels, consonants, digits, whitespace, and special characters in a sentence. Calculated total letters and vowel percentage: (vowels / total_letters) * 100.
+
+2. Errors Faced:
+- Error 1: Consonant counter was counting spaces and punctuation because I only checked 'c not in vowels'.
+  Fix: Added check to ensure character is alphabetic first: c.isalpha() and c.lower() not in 'aeiou'.
+- Error 2: ZeroDivisionError when sentence had no alphabetic letters.
+  Fix: Added conditional check before calculating vowel percentage: if total_letters > 0.
+
+3. Output:
+Tested with 'Python 3.14 is amazing for AI!'. Result: 6 words, 8 vowels, 12 consonants, 3 digits, 5 spaces, 2 special chars. Total letters: 20, Vowel percentage: 40.0%.

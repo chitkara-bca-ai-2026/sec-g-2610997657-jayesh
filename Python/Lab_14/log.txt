@@ -1,0 +1,15 @@
+Lab Reflection:
+
+1. Approach:
+Used immutable tuples for book catalog entries (title, author, year, category) and sets for category gap analysis. Set up an interactive menu to view catalog, add book records, view unique categories in sorted order, add genres to student wishlist, and perform set operations (intersection &, difference -, union |).
+
+2. Errors Faced:
+- Error 1: TypeError: 'tuple' object does not support item assignment when attempting to edit a book's category.
+  Fix: Tuples cannot be modified in-place. Created a new tuple (title, author, year, category) and appended to the books list.
+- Error 2: Confusion between set difference order: library - wishlist vs wishlist - library.
+  Fix: The requirement was purchase order for books students want that the library lacks, which is: student_wishlist - library_categories.
+- Error 3: Duplicate categories being added.
+  Fix: Used Python set .add() which automatically handles uniqueness without duplicate entries.
+
+3. Output:
+Initial 4 books loaded. Added 'Data Structures and Algorithms' (2013, Data Science). Wishlist gap analysis showed intersection: ['AI'], difference: ['Cloud Computing', 'Cybersecurity', 'Machine Learning', 'Robotics'], union: all 7 genres.

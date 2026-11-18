@@ -1,0 +1,13 @@
+Lab Reflection:
+
+1. Approach:
+Created an office daily log book utilizing file appending ('a' mode) so existing entries are preserved. Wrote append_entry(filename, entry) and display_log(filename) that enumerates logged entries with index [01], [02], etc.
+
+2. Errors Faced:
+- Error 1: Appended text merged directly onto the last line without newline separator.
+  Fix: Added explicit '\n' when writing: f.write(entry.strip() + '\n').
+- Error 2: Reading empty lines when display_log counted entries.
+  Fix: Stripped whitespace and checked 'if line.strip():' before incrementing counter.
+
+3. Output:
+Preloaded 3 sample entries. Appended new entry, verified that original entries remained intact, and viewed formatted log table with total entry count.

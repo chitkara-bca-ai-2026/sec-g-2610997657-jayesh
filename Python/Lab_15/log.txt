@@ -1,0 +1,15 @@
+Lab Reflection:
+
+1. Approach:
+Implemented a comprehensive Student Information Management System using nested dictionaries. Outer dictionary uses roll number string as key; inner dictionary stores Name, Branch, Semester, and Marks (list of 3 integers). Created a 7-option menu: view all, search, register, update, academic performance, delete, and exit.
+
+2. Errors Faced:
+- Error 1: KeyError when searching for a non-existent roll number using students[roll].
+  Fix: Switched to students.get(roll) and checked if result is None before accessing attributes.
+- Error 2: Overwriting an existing student record when registering a duplicate roll number.
+  Fix: Added validation 'if roll in students:' to block duplicate registrations.
+- Error 3: Modifying dictionary while iterating gave RuntimeError.
+  Fix: Used .pop(roll, None) for deletion outside any iteration loop.
+
+3. Output:
+Preloaded roll 101 (Aman), 102 (Riya), 103 (Karan). Successfully registered 104 (Simran), updated Aman semester to 2, checked Simran report (87.67% PASS), deleted Karan record, and verified final list.

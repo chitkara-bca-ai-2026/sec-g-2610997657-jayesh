@@ -1,0 +1,13 @@
+Lab Reflection:
+
+1. Approach:
+Developed a text processing utility covering string operations: character indexing, string slicing [start:end], case conversion (.upper() and .lower()), substring replacement (.replace()), and length measurement with len().
+
+2. Errors Faced:
+- Error 1: IndexError: string index out of range when entering index equal to length.
+  Fix: Python strings are 0-indexed, so valid indices are 0 to len-1. Added bounds check.
+- Error 2: .replace() was not modifying the original string.
+  Fix: Strings are immutable in Python. Stored the returned value in a new variable: modified_str = s.replace(old, new).
+
+3. Output:
+Tested with sentence 'Hello World', index 4 -> 'o', slice [0:5] -> 'Hello', uppercase, lowercase, replaced 'Hello' with 'Hi', length 11.

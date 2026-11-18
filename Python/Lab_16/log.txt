@@ -1,0 +1,15 @@
+Lab Reflection:
+
+1. Approach:
+Designed a modular enterprise utility calculator separating business logic functions from UI. Built functions: add(a, b), subtract(a, b), multiply(a, b), divide(a, b), modulus(a, b), power(base, exp=2) with default parameter, and format_number(n). Maintained a session calculation history list.
+
+2. Errors Faced:
+- Error 1: ZeroDivisionError when user passed 0 as divisor in divide and modulus.
+  Fix: Added defensive checking 'if b == 0: return None' inside divide() and modulus() before computing.
+- Error 2: Default argument exp=2 was ignored because empty input was converted to float('').
+  Fix: Checked if exponent input string is empty: if exp_str.strip() == '': call power(base) else: power(base, float(exp_str)).
+- Error 3: Printing floats like 40.0 instead of clean integer 40.
+  Fix: Implemented helper format_number(n) that returns int(n) if n.is_integer() else round(n, 4).
+
+3. Output:
+Tested 25 + 15 = 40, 50 - 18.5 = 31.5, power of 5 with default exponent -> 25.0, division by zero defense message, and verified calculation history log.

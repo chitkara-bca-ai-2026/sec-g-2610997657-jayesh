@@ -1,0 +1,13 @@
+Lab Reflection:
+
+1. Approach:
+Implemented a calendar verification system to check whether a given year is a leap year using nested/compound if-else logic. Validated that the year entered is a positive integer, then checked century and non-century leap rules and printed February days and total year days.
+
+2. Errors Faced:
+- Error 1: Year 1900 was incorrectly showing as LEAP YEAR.
+  Fix: My condition was 'year % 4 == 0 or year % 400 == 0'. Forgot that century years divisible by 100 must also be divisible by 400. Updated logic to: (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0).
+- Error 2: Program crashed on 0 or negative numbers.
+  Fix: Added input validation at start: if year <= 0: print error and exit.
+
+3. Output:
+Tested with 2024 -> LEAP YEAR, 366 days, 29 days in Feb. Tested with 1900 -> COMMON YEAR, 365 days.

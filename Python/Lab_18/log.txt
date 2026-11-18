@@ -1,0 +1,16 @@
+Lab Reflection:
+
+1. Approach:
+Implemented mathematical recursion for factorial and Fibonacci series generation.
+factorial(n): base case n <= 1 returns 1, recursive step n * factorial(n - 1).
+fibonacci(n): base cases n == 0 -> 0, n == 1 -> 1, recursive step fib(n-1) + fib(n-2).
+Wrapped both in an interactive menu with input validation.
+
+2. Errors Faced:
+- Error 1: RecursionError: maximum recursion depth exceeded for negative inputs.
+  Fix: Added check n < 0 before calling recursive function and showed validation error.
+- Error 2: Fibonacci series was printing 0-based or 1-based index confusion.
+  Fix: Looped from i = 0 to terms - 1 and appended fibonacci(i) to a list.
+
+3. Output:
+Tested 5! = 120. Generated 8 Fibonacci terms: [0, 1, 1, 2, 3, 5, 8, 13]. Handled invalid inputs cleanly.

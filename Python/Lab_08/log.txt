@@ -1,0 +1,13 @@
+Lab Reflection:
+
+1. Approach:
+Created a school result processing system. Took student name and roll number, then looped through 5 subjects to take marks (0-100) with validation. Calculated total marks out of 500 and percentage, and assigned grades (A+ to F) using if-elif-else ladder. Added a check so if any subject has marks < 40, the student is marked FAIL regardless of percentage.
+
+2. Errors Faced:
+- Error 1: Student with one failed subject still received Grade A because overall percentage was 82%.
+  Fix: Introduced a boolean flag 'has_failed = False'. If any subject mark was < 40, set flag to True and forced grade to 'F' and result to 'FAIL'.
+- Error 2: Invalid mark like 105 was accepted into total.
+  Fix: Added while loop validation for each subject input until a valid mark between 0 and 100 was entered.
+
+3. Output:
+Tested with Aarav Sharma (Roll 1024), marks 85, 92, 78, 88, 90. Total: 433.0/500, 86.60%, Result: PASS, Grade: A, Remarks: Excellent.

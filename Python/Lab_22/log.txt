@@ -1,0 +1,13 @@
+Lab Reflection:
+
+1. Approach:
+Developed a keyword search utility for text files (report.txt). Iterated line by line using enumerate(f, start=1), performed case-insensitive search using keyword.lower() in line.lower(), and reported line numbers and match counts.
+
+2. Errors Faced:
+- Error 1: Searching for 'ai' missed 'AI' and 'Artificial Intelligence'.
+  Fix: Used .lower() on both the search keyword and the file lines. Also used line.lower().count(keyword.lower()) to count multiple occurrences on the same line.
+- Error 2: Extra blank lines printed during preview.
+  Fix: Used line.rstrip('\n') when printing.
+
+3. Output:
+Searched keyword 'AI' in report.txt. Found matches in Line 1, Line 3, and Line 5 with total occurrences = 3. Full document view printed lines 1 to 5 with line numbers.

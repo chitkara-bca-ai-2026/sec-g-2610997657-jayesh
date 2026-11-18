@@ -1,0 +1,17 @@
+Lab Reflection:
+
+1. Approach:
+Wrote nested loop programs to generate 4 festival decorative patterns:
+Pattern 1: Right-angled star triangle
+Pattern 2: Number triangle (1 to i)
+Pattern 3: Inverted star triangle
+Pattern 4: Centered pyramid using proper space padding.
+
+2. Errors Faced:
+- Error 1: Pyramid stars were shifted to one side and not centered.
+  Fix: Calculated leading spaces as (n - i) and printed (2 * i - 1) stars with end=' '.
+- Error 2: Number triangle was printing on a single continuous line.
+  Fix: Added an empty print() at the end of outer loop iteration to break to next row.
+
+3. Output:
+Tested with n = 5 rows. All 4 patterns matched expected output with clean row alignment.

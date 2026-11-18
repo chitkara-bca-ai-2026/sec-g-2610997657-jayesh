@@ -1,0 +1,13 @@
+Lab Reflection:
+
+1. Approach:
+Created a file handling tool managing student marks in student_marks.txt (comma-separated Name,Marks). Implemented store_student in append mode with 0-100 score validation, and display_and_calculate_average to parse file, compute class sum and average to 2 decimal places.
+
+2. Errors Faced:
+- Error 1: ValueError when splitting empty trailing lines in student_marks.txt.
+  Fix: Added 'if not line.strip(): continue' before splitting by comma.
+- Error 2: ZeroDivisionError when file was empty.
+  Fix: Checked if student_count > 0 before computing average = total / count.
+
+3. Output:
+Prepopulated with Aman (85), Riya (92), Karan (78). Total: 255, Average: 85.00. Added Neha (88). Updated ledger: 4 students, total 343, average 85.75.
